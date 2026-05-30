@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login - The Healing Canopy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: #f3f8f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Book Antiqua, sans-serif;
+    }
+    .admin-login-card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      width: 400px;
+      text-align: center;
+    }
+    .admin-login-card h2 {
+      color: #3e665e;
+      margin-bottom: 20px;
+    }
+    .admin-login-card select, .admin-login-card input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .admin-login-card button {
+      background: #598a73;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .admin-login-card button:hover {
+      background: #3e665e;
+    }
+    .error-msg {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-login-card">
+    <!-- The Healing Canopy Serene Tree Logo -->
+    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#3e665e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 10px;"><path d="M12 22V12"/><path d="M12 12a6 6 0 1 0-6-6 6 6 0 0 0 6 6z"/><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"/></svg>
+    <h2>Doctor Login</h2>
+    <div class="error-msg" id="loginError">Invalid credentials.</div>
+    <form id="adminLoginForm">
+      <input type="email" id="doctorEmail" placeholder="Email (e.g. elizabeth@The Healing Canopy.com)" required>
+      <input type="password" id="adminPassword" placeholder="Password" required>
+      <button type="submit">Access Dashboard</button>
+    </form>
+    <br>
+    <a href="home.html" style="font-size: 14px; color: #598a73; text-decoration: none;">&larr; Back to Home</a>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

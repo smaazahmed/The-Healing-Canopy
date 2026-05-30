@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Book Antiqua;
+    }
+
+    body {
+      line-height: 1.6;
+      background-color: #f3f8f5;
+      color: #000000;
+    }
+
+    header {
+      background-color: #598a73;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #000000;
+      text-align: center;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.041);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #000000;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #3e665e;
+    }
+
+    .about-bg {
+      background: url('https://static.vecteezy.com/system/resources/previews/020/592/408/non_2x/relaxing-green-subtle-gradient-background-free-vector.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    .about-bg .card {
+      background-color: rgba(103, 163, 133, 0.6);
+      color: white;
+    }
+    .team-member {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .team-member:hover {
+        transform: translateY(-5px);
+      }
+      
+      .team-member img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        border: 3px solid #3e665e;
+      }
+      
+      .team-member h4 {
+        margin: 10px 0 5px;
+        color: #3e665e;
+      }
+      
+      .team-member p {
+        font-size: 0.9em;
+        margin: 3px 0;
+      }
+      
+
+    footer {
+      background-color: #507262;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer p {
+      margin: 10px 0;
+    }
+
+    footer i {
+      color: #2f4b32f6;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+      <!-- Navigation Bar -->
+        <!-- Navigation Bar -->
+    <header>
+        <nav style="display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <div class="logo">
+                <a href="home.html" style="color: #4b8b6e; font-size: 28px; margin: 0; font-weight: bold; font-family: 'Book Antiqua', serif; text-decoration: none;">The Healing Canopy</a>
+            </div>
+            <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; align-items: center;">
+                <li><a href="home.html" style="color: #4b8b6e; font-weight: bold; text-decoration: none;">Home</a></li>
+                <li><a href="consult.html" style="color: #4b8b6e; font-weight: bold; text-decoration: none;">Book an Appointment</a></li>
+                <li><a href="about us.html" style="color: #4b8b6e; font-weight: bold; text-decoration: none;">About Us</a></li>
+                <li><a href="resources.html" style="color: #4b8b6e; font-weight: bold; text-decoration: none;">Resources</a></li>
+                <li><a href="contact_us.html" style="color: #4b8b6e; font-weight: bold; text-decoration: none;">Contact Us</a></li>
+                <li><a href="admin_login.html" style="color: #4b8b6e; font-weight: bold; text-decoration: none; border: 1px solid #4b8b6e; padding: 5px 10px; border-radius: 5px;">Doctor Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- Section 1: About & Mission -->
+  <section id="about" class="about-bg">
+    <h2 data-aos="fade-down">About Us & Our Mission</h2>
+    <div class="section-grid">
+      <div class="card" data-aos="fade-right">
+        <h3>Who We Are</h3>
+        <p>We are a compassionate team offering mental health care to everyone. Our goal is to break the stigma around seeking help.</p>
+      </div>
+      <div class="card" data-aos="fade-left">
+        <h3>Our Mission</h3>
+        <p>To empower people with accessible support, promote mental well-being, and foster a community of understanding and growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: What We Offer & Team -->
+  <section id="services">
+    <h2 data-aos="fade-up">What We Offer & Our Team</h2>
+    <div class="section-grid">
+      <div class="card" data-aos="zoom-in-right">
+        <h3><i class="fas fa-hands-helping"></i> What We Offer</h3>
+        <p>At our mental health consultation platform, we offer a comprehensive range of features designed to support emotional well-being and personal growth. Users can create secure accounts with personalized dashboards and access virtual consultations through chat or video with qualified professionals. Our platform includes daily motivational quotes, self-care reminders, and interactive self-help tools like guided meditation and breathing exercises. We provide a rich library of educational resources including articles and mental health guides. Users can also set personal goals, track their mental health progress, and monitor task completion for healthy habit-building. To foster a sense of community, we offer forums, group chats, and virtual group support sessions. Additionally, users can give feedback, report issues, and access reliable support when needed.</p>
+        <ul>
+          <li>Free Consultations</li>
+          <li>Virtual Therapy Sessions</li>
+          <li>Emergency Support</li>
+          <li>Guided Meditation Tools</li>
+        </ul>
+      </div>
+      <div class="card" id="team" data-aos="zoom-in-left">
+        <h3><i class="fas fa-users"></i> Our Team</h3>
+        <div class="section-grid">
+          <!-- Team Member 1 -->
+          <div class="team-member">
+            <img src="https://www.shutterstock.com/image-photo/happy-professional-middle-eastern-female-600nw-2495256037.jpg" alt="Member 1">
+            <h4>Dr. Elizabeth Jane Harwood </h4>
+            <p>Clinical Psychologist</p>
+            <a href="mailto:elizabeth.harwood@The Healing Canopy.com">elizabeth.harwood@The Healing Canopy.com</a>
+          </div>
+      
+          <!-- Team Member 2 -->
+          <div class="team-member">
+            <img src="https://media.istockphoto.com/id/1326420590/photo/portrait-of-happy-black-male-psychologist-looking-at-camera-and-taking-notes-during-therapy.jpg?s=612x612&w=0&k=20&c=sQIUcX108sC9tH4CG9Vh4RYjthJ5bJpUFfdcGcdKiM4=" alt="Member 2">
+            <h4>Mr. John Blake</h4>
+            <p>Therapist & Counselor</p>
+            <a href="mailto:john.blake@The Healing Canopy.com">john.blake@The Healing Canopy.com</a>
+          </div>
+      
+          <!-- Team Member 3 -->
+          <div class="team-member">
+            <img src="https://cbx-prod.b-cdn.net/COLOURBOX60989938.jpg?width=800&height=800&quality=70" alt="Member 3">
+            <h4>Dr. Victoria Anne Caldwell</h4>
+            <p>Child Psychologist</p>
+            <a href="mailto:victoria.caldwell@The Healing Canopy.com">victoria.caldwell@The Healing Canopy.com</a>
+          </div>
+        </div>
+      </div>
+      
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+    <p><i class="fas fa-envelope"></i> support@The Healing Canopy.com</p>
+    <p><i class="fas fa-phone"></i> +123-456-7890</p>
+    <p><i class="fas fa-map-marker-alt"></i> 123 Wellness Lane, Care City</p>
+    <p>&copy; 2025 The Healing Canopy. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+<script src="app.js"></script>
+</body>
+</html>

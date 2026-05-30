@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Healing Canopy - Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Book Antiqua', serif;
+      background: #F9F7F1;
+      height: 100vh;
+      display: flex;
+    }
+    .split-container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+    .left-side {
+      flex: 1;
+      background: url('https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+    .left-side::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(135deg, rgba(75, 139, 110, 0.8), rgba(47, 79, 47, 0.8));
+    }
+    .left-content {
+      position: relative;
+      z-index: 1;
+      max-width: 500px;
+    }
+    .left-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+    .left-content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+    .right-side {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #F9F7F1;
+      position: relative;
+    }
+    .form-container {
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 400px;
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .form-container h2 {
+      font-size: 2rem;
+      color: #2F4F2F;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .input-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .input-group i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #7f925e;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 15px 15px 15px 45px;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      box-sizing: border-box;
+      transition: all 0.3s;
+    }
+    .input-group input:focus {
+      border-color: #4b8b6e;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(75, 139, 110, 0.1);
+    }
+    .btn-submit {
+      width: 100%;
+      padding: 15px;
+      background: #4b8b6e;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-submit:hover {
+      background: #3a6b54;
+      transform: translateY(-2px);
+    }
+    .toggle-text {
+      text-align: center;
+      margin-top: 20px;
+      color: #666;
+    }
+    .toggle-text a {
+      color: #4b8b6e;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .toggle-text a:hover {
+      text-decoration: underline;
+    }
+    
+    #registerModal {
+      display: none;
+    }
+
+    /* Back to Site Button */
+    .back-btn {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      text-decoration: none;
+      color: #2F4F2F;
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+      z-index: 10;
+    }
+    .back-btn:hover {
+      color: #4b8b6e;
+    }
+
+    @media (max-width: 768px) {
+      .left-side {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="split-container">
+    <div class="left-side">
+      <div class="left-content">
+        <h1>Welcome to The Healing Canopy</h1>
+        <p>Your mental health journey begins here. Log in to manage your appointments, connect with your therapist, and discover inner peace.</p>
+      </div>
+    </div>
+    
+    <div class="right-side">
+      <a href="home.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Home</a>
+      
+      <!-- Login Section -->
+      <div id="loginModal" class="form-container">
+        <h2>Welcome Back</h2>
+        <form action="login.php" method="post">
+          <div class="input-group">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="input-group">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="password" placeholder="Password" required>
+          </div>
+          <button type="submit" class="btn-submit">Login</button>
+        </form>
+        <p class="toggle-text">Don't have an account? <a onclick="toggleForms()">Sign Up</a></p>
+      </div>
+
+      <!-- Register Section -->
+      <div id="registerModal" class="form-container">
+        <h2>Create Account</h2>
+        <form action="register.php" method="post">
+          <div class="input-group">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" name="username" placeholder="Full Name" required>
+          </div>
+          <div class="input-group">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="input-group">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="password" placeholder="Password" required>
+          </div>
+          <button type="submit" class="btn-submit">Sign Up</button>
+        </form>
+        <p class="toggle-text">Already have an account? <a onclick="toggleForms()">Login</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function toggleForms() {
+      const login = document.getElementById('loginModal');
+      const register = document.getElementById('registerModal');
+      if (login.style.display !== 'none') {
+        login.style.display = 'none';
+        register.style.display = 'block';
+      } else {
+        login.style.display = 'block';
+        register.style.display = 'none';
+      }
+    }
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
