@@ -72,6 +72,6 @@ Use the following credentials to access the Doctor/Admin Dashboard for testing p
 
 | Doctor Name | Email Address | Password |
 | :--- | :--- | :--- |
-| **Dr. Elizabeth Jane Harwood** | `elizabeth@The Healing Canopy.com` | `password123` |
-| **Mr. John Blake** | `john@The Healing Canopy.com` | `password123` |
-| **Dr. Victoria Anne Caldwell** | `victoria@The Healing Canopy.com` | `password123` |
+| **Dr. Elizabeth Jane Harwood** | `elizabeth@thc.com` | `password123` |
+| **Mr. John Blake** | `john@thc.com` | `password123` |
+| **Dr. Victoria Anne Caldwell** | `victoria@thc.com` | `password123` |

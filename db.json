@@ -7,35 +7,25 @@
       "id": "btSLNYcCFWA"
     }
   ],
-  "appointments": [
-    {
-      "fullName": "Maaz Ahmed",
-      "email": "smaazahmed1209@gmail.com",
-      "phone": "123456789",
-      "date": "2026-05-21",
-      "time": "17:26",
-      "doctor": "Mr. John Blake",
-      "id": "9Y6OwIAL7KI"
-    }
-  ],
+  "appointments": [],
   "messages": [],
   "doctors": [
     {
       "id": "1",
       "name": "Dr. Elizabeth Jane Harwood",
-      "email": "elizabeth@The Healing Canopy.com",
+      "email": "elizabeth@thc.com",
       "password": "password123"
     },
     {
       "id": "2",
       "name": "Mr. John Blake",
-      "email": "john@The Healing Canopy.com",
+      "email": "john@thc.com",
       "password": "password123"
     },
     {
       "id": "3",
       "name": "Dr. Victoria Anne Caldwell",
-      "email": "victoria@The Healing Canopy.com",
+      "email": "victoria@thc.com",
       "password": "password123"
     }
   ],
